@@ -48,7 +48,7 @@ TRS-ABCD was initially conceptualized as a predictive tool for the outcome of hi
 
 ### **I think there is a bug in your code or error in your metadata --- what should I do?**
 
-Please report any bugs or errors to \< placeholder at health dot ucsd dot edu \>
+\[pending: check back later\]
 
 ### **What is "ALEXSA" and why is it included in the metadata?**
 
@@ -56,7 +56,7 @@ Assessment of Liability and EXposure to Substance use and Antisocial behavior fo
 
 ### **How do I acknowledge / cite this tool?**
 
-TBD
+\[pending: check back later\]
 
 ### **Where can I read more about creating and evaluating predictive modeling tools?**
 
