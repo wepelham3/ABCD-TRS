@@ -1,5 +1,5 @@
 study,domain,sub_domain,source,table_name,variable,label,has_skip_logic,sensitivity,plab_facet,plab_subfacet,alexsa_facet,nobs_00mo,nobs_12mo,nobs_24mo,nobs_36mo,nobs_48mo,nobs_60mo,nobs_72mo
-Core,ABCD (General),Standard Variables,General,ab_g_dyn,ab_g_dyn__visit_age,Visit information: Youth's age at the start of the event,no,not sensitive,NA,NA,NA,11868,11219,10973,10450,9739,8885,5056
+Core,ABCD (General),Standard Variables,General,ab_g_dyn,ab_g_dyn__visit_age,Visit information: Youth's age at the start of the event,no,not sensitive,demographics,age,_none_,11868,11219,10973,10450,9739,8885,5056
 Core,ABCD (General),Demographics,Parent,ab_p_demo,ab_p_demo__age__slf_001,How old are you? [Cross-listed: mh_p_asr__slf__age_001],yes,not sensitive,demographics,age,_none_,11777,11173,10863,10168,9481,8629,4960
 Core,ABCD (General),Demographics,Parent,ab_p_demo,ab_p_demo__child__time_001,Is there another household in which the child spends a significant amount of time?,no,not sensitive,demographics,household structure,_none_,11784,11144,10847,10143,9461,8638,4959
 Core,ABCD (General),Demographics,Parent,ab_p_demo,ab_p_demo__country_002,How many years has the child lived in the United States?,yes,not sensitive,identities,country,_none_,0,0,0,0,0,0,0
