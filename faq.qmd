@@ -4,7 +4,7 @@ If you have a question that is not currently addressed here, please reach out to
 
 ### **Will the code in abcd-itembuild work if I don't have the ABCD Study data?**
 
-No, you must attain access to the ABCD 6.0 release (only available directly from the NIH) for the code to work. It is highly specific to the ABCD dataset.
+No, you must attain access to the ABCD 6.0 release (only available directly from the [NIH](https://www.nbdc-datahub.org/)) for the code to work. It is highly specific to the ABCD dataset.
 
 ### **Is the code available in another programming language aside from R?**
 
@@ -44,7 +44,7 @@ Variables were recoded for the following reasons:
 
 ### **Where are the items measuring youth substance use?**
 
-TSP-ABCD was initially conceptualized as a predictive tool for the outcome of high-risk, early substance use. As such, the lab prioritized evaluating whether variables could be considered items when they did not contain youth substance use. We are currently working on evaluating these variables and will update the metadata on this website once we have finished. Here is a [spreadsheet](https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf) containing all potential items flagged for youth substance use.
+TRS-ABCD was initially conceptualized as a predictive tool for the outcome of high-risk, early substance use. As such, the lab prioritized evaluating whether variables could be considered items when they did not contain youth substance use. We are currently working on evaluating these variables and will update the metadata on this website once we have finished. Here is a [spreadsheet](https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf) containing all potential items flagged for youth substance use.
 
 ### **I think there is a bug in your code or error in your metadata --- what should I do?**
 
