@@ -7,4 +7,4 @@ format: html
 
 </iframe>
 
-On youth substance use data: Youth substance use data has yet to be evaluated as potential items for TSP-ABCD. We expect to finish evaluating youth substance use data and update this page by end of January 2026.
+On youth substance use data: Youth substance use data has yet to be evaluated as potential items for TRS-ABCD. We expect to finish evaluating youth substance use data and update this page by end of January 2026.
