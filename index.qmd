@@ -17,4 +17,4 @@ If you do not use R, you can still download our item metadata (metadata-ABCD-ite
 
 Development of this website and the associated work was funded by a grant from the National Institute on Drug Abuse (NIDA), DA058314.
 
-The analysis methodologies, findings, and interpretations expressed in publications using TSP-ABCD are those of the authors and do not constitute an endorsement from the Pelham Lab.
+The analysis methodologies, findings, and interpretations expressed in publications using TRS-ABCD are those of the authors and do not constitute an endorsement from the Pelham Lab.
