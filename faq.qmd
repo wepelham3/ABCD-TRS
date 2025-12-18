@@ -1,0 +1,77 @@
+# Frequently Asked Questions
+
+If you have a question that is not currently addressed here, please reach out to \<wpelham at ucsd dot edu\>.
+
+### **Will the code in abcd-itembuild work if I don't have the ABCD Study data?**
+
+No, you must attain access to the ABCD 6.0 release (only available directly from the NIH) for the code to work. It is highly specific to the ABCD dataset.
+
+### **Is the code available in another programming language aside from R?**
+
+No, currently the only available code for this project is in R.
+
+### **How did you create the metadata?**
+
+Pelham Lab research assistants evaluated the entirety of the metadata from the ABCD 6.0 release under the supervision of Dr. William Pelham III. Variables were first evaluated on the basis of viability as a question on a survey. If a variable could be a survey question, it was then evaluated on the following:
+
+a\) administration of the variable in the core study (such that all eligible ABCD participants could have completed the variable) ,
+
+b\) administration of the variable happening outside of the eligibility screener,
+
+c\) if gating is present, the variable's ability to be combined with the gating question(s) to produce a straightforward single question with a single set of responses with a monotonic relationship with the outcomes , and
+
+d\) any other reason that would make presenting the variable on a predictive screening battery difficult.
+
+Columns were also created to facilitate recoding potential items and also to sort/categorize the items.
+
+More information on how we created the bespoke metadata can be found [here](https://docs.google.com/document/d/1wit57vQvdoEeb6oLyM0x9mYwy2F0ez0y_4foyNkmhvY/edit?tab=t.0).
+
+### **How did you decide which variables to recode, and how to recode them?**
+
+Variables were recoded for the following reasons:
+
+1.  The same variable was split into two or more separate variables: usually a baseline variable and a longitudinal variable. For example, the question "Has she/he \[your child\] ever been to a doctor for allergies" is asked at baseline, responses for which are stored in the variable ph_p_mhx_002. Following baseline, the question is rephrased as "Since we last saw you, has your child been to a doctor for allergies", responses for which are stored in ph_p_mhx_002\_\_l. Upon evaluating that there is no meaningful change in the contents of the question itself, these variables were combined into the baseline variable, after which we deleted the longitudinal variable.
+
+2.  The variable itself did not have responses that were monotonic (linear). For example, the question
+
+    | *What best describes your child's current school setting?*
+
+    can only elicit responses that are not linear (e.g., "public school", "private school", "home school", etc.). To be able to use the content of these variables in our prediction models, we recoded each response to these nonlinear variables as binary (0/1) items (e.g., child_in_reg_public_school, child_in_reg_private_school, child_in_online_school, etc.).
+
+3.  The variable was gated by another variable, such that only a subsection of the full ABCD participant pool responded to it AND answers from the gating question(s) could be imputed as responses to the gated variable. For example, the question "About how many hours per week does your child spend listening to music for pleasure?" is only presented to parents who endorse that their child listens to music for pleasure. We know, however, that parents who do not endorse that their child listens to music, if presented with the question, "About how many hours per week does your child spend listening to music for pleasure?" would have responded with "0 hours." As such, we impute 0s for hours of music listening per week for people who responded "no" to the gating question.
+
+4.  The variable was in units that could not be adequately represented in a linear model (e.g., hours and minutes) without recoding (e.g., 3:30 pm --\> 15.5)
+
+### **Where are the items measuring youth substance use?**
+
+TSP-ABCD was initially conceptualized as a predictive tool for the outcome of high-risk, early substance use. As such, the lab prioritized evaluating whether variables could be considered items when they did not contain youth substance use. We are currently working on evaluating these variables and will update the metadata on this website once we have finished. Here is a [spreadsheet](https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf) containing all potential items flagged for youth substance use.
+
+### **I think there is a bug in your code or error in your metadata --- what should I do?**
+
+Please report any bugs or errors to \< placeholder at health dot ucsd dot edu \>
+
+### **What is "ALEXSA" and why is it included in the metadata?**
+
+Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment ([Ridenour et al., 2009](https://pubmed.ncbi.nlm.nih.gov/20180677/)) is a child report assessment for predictors of early onset substance abuse and for antisocial behavior. The "alexsa_facet" featured in metadata-ABCD-items.csv was created through evaluating whether each item fit into one of the 34 subscales.
+
+### **How do I acknowledge / cite this tool?**
+
+TBD
+
+### **Where can I read more about creating and evaluating predictive modeling tools?**
+
+Here are some references!
+
+Steyerberg, E. W., & Harrell, F. E. (2016). Prediction models need appropriate internal, internal--external, and external validation. Journal of Clinical Epidemiology, 69, 245--247. https://doi.org/10.1016/j.jclinepi.2015.04.005
+
+Japkowicz, N., & Shah, M. (2011). Evaluating Learning Algorithms: A Classification Perspective. Cambridge University Press.
+
+Hemingway, H., Croft, P., Perel, P., Hayden, J. A., Abrams, K., Timmis, A., Briggs, A., Udumyan, R., Moons, K. G. M., Steyerberg, E. W., Roberts, I., Schroter, S., Altman, D. G., & Riley, R. D. (2013). Prognosis research strategy (PROGRESS) 1: A framework for researching clinical outcomes. BMJ, 346, e5595. <https://doi.org/10.1136/bmj.e5595> 
+
+Riley, R. D., Hayden, J. A., Steyerberg, E. W., Moons, K. G. M., Abrams, K., Kyzas, P. A., Malats, N., Briggs, A., Schroter, S., Altman, D. G., Hemingway, H., & Group,  for the P. (2013). Prognosis research strategy (PROGRESS) 2: Prognostic factor research. PLOS Medicine, 10(2), e1001380. <https://doi.org/10.1371/journal.pmed.1001380> 
+
+Steyerberg, E. W., Moons, K. G. M., Windt, D. A. van der, Hayden, J. A., Perel, P., Schroter, S., 
+
+Riley, R. D., Hemingway, H., Altman, D. G., & Group,  for the P. (2013). Prognosis research strategy (PROGRESS) 3: Prognostic model research. PLOS Medicine, 10(2), e1001381. <https://doi.org/10.1371/journal.pmed.1001381>
+
+Hingorani, A. D., Windt, D. A. van der, Riley, R. D., Abrams, K., Moons, K. G. M., Steyerberg, E. W., Schroter, S., Sauerbrei, W., Altman, D. G., & Hemingway, H. (2013). Prognosis research strategy (PROGRESS) 4: Stratified medicine research. BMJ, 346, e5793. <https://doi.org/10.1136/bmj.e5793>

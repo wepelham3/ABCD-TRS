@@ -1,0 +1,32 @@
+project:
+  type: website
+  output-dir : docs
+
+website:
+  title: "Tools for Survey-Based Prediction in ABCD"
+  navbar:
+    left:
+      - file: index.qmd
+        text: Getting Started
+      - file: intro.qmd
+        text: Intro
+      - file: code-download.qmd
+        text: Downloads
+      - file: metadata-download.qmd
+        text: Documentation
+      - file: explore-metadata.qmd
+        text: Metadata Explorer
+      -  file: faq.qmd
+         text: FAQs
+
+
+      
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual
+

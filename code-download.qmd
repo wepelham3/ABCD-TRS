@@ -1,0 +1,7 @@
+## Download the Code Repository
+
+Here is a [link](https://github.com/wepelham3/abcd-itembuild) to the Github Repository containing abcd-itembuild, an R project that filters the ABCD 6.0 dataset down to items eligible for survey-based prediction models, makes necessary recodes to items, and outputs metadata-ABCD-items.csv.
+
+## Item Metadata Download
+
+Here is the [link](https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf) to the csv file (metadata-ABCD-items.csv) for the item metadata.
