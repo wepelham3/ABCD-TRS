@@ -11,7 +11,7 @@ website:
       - file: intro.qmd
         text: Intro
       - file: code-download.qmd
-        text: Downloads
+        text: Download the Tools
       - file: metadata-download.qmd
         text: Documentation
       - file: explore-metadata.qmd

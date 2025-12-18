@@ -9,7 +9,7 @@ This is the website for navigating Tools for Risk Scores in the Adolescent Brain
 To get started:
 
 1.  If you don't already have it, obtain access to the ABCD 6.0 data (only available directly through the [NIH](https://www.nbdc-datahub.org/))
-2.  Download the code [repository](https://github.com/wepelham3/abcd-itembuild) This code will take the ABCD Study 6.0 data and create a tidy dataframe with individual survey items ready to plug into a predictive model.
+2.  Download the code repository. This code will take the ABCD Study 6.0 data and create a tidy dataframe with individual survey items ready to plug into a predictive model.
 
 If you do not use R, you can still download our item metadata (metadata-ABCD-items.csv) to work on survey-based projects. The items in the metadata consist of the entirety of variables that could be presented on a survey with little to no context.
 
