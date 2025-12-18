@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tools for Survey-Based Prediction in ABCD – metadata-download</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Tools for Survey-Based Prediction in ABCD</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Getting Started</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./intro.html" rel="" target="">
+ <span class="menu-text">Intro</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./code-download.html" rel="" target="">
+ <span class="menu-text">Downloads</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./metadata-download.html" rel="" target="" aria-current="page">
+ <span class="menu-text">Documentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./explore-metadata.html" rel="" target="">
+ <span class="menu-text">Metadata Explorer</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./faq.html" rel="" target="">
+ <span class="menu-text">FAQs</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#documentation-for-navigating-the-item-metadata" id="toc-documentation-for-navigating-the-item-metadata" class="nav-link active" data-scroll-target="#documentation-for-navigating-the-item-metadata">Documentation for Navigating the Item Metadata</a>
+  <ul class="collapse">
+  <li><a href="#domain" id="toc-domain" class="nav-link" data-scroll-target="#domain">domain</a></li>
+  <li><a href="#sub_domain" id="toc-sub_domain" class="nav-link" data-scroll-target="#sub_domain">sub_domain</a></li>
+  <li><a href="#source" id="toc-source" class="nav-link" data-scroll-target="#source">source</a></li>
+  <li><a href="#table_name" id="toc-table_name" class="nav-link" data-scroll-target="#table_name">table_name</a></li>
+  <li><a href="#variable" id="toc-variable" class="nav-link" data-scroll-target="#variable">variable</a></li>
+  <li><a href="#label" id="toc-label" class="nav-link" data-scroll-target="#label">label</a></li>
+  <li><a href="#has_branching_logic" id="toc-has_branching_logic" class="nav-link" data-scroll-target="#has_branching_logic">has_branching_logic</a></li>
+  <li><a href="#sensitivity" id="toc-sensitivity" class="nav-link" data-scroll-target="#sensitivity">sensitivity</a></li>
+  <li><a href="#plab_facet" id="toc-plab_facet" class="nav-link" data-scroll-target="#plab_facet">plab_facet</a></li>
+  <li><a href="#plab_subfacet" id="toc-plab_subfacet" class="nav-link" data-scroll-target="#plab_subfacet">plab_subfacet</a></li>
+  <li><a href="#alexsa_facet" id="toc-alexsa_facet" class="nav-link" data-scroll-target="#alexsa_facet">alexsa_facet</a></li>
+  <li><a href="#nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo" id="toc-nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo" class="nav-link" data-scroll-target="#nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo">nobs_00mo, nobs_12mo, nobs_24mo, nobs_36mo, nobs_48mo, nobs_60mo, or nobs_72mo</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+
+<section id="documentation-for-navigating-the-item-metadata" class="level2">
+<h2 class="anchored" data-anchor-id="documentation-for-navigating-the-item-metadata">Documentation for Navigating the Item Metadata</h2>
+<p>This is a user’s guide to navigating the item metadata (metadata-ABCD-items.csv). The csv file contains several columns meant to help navigate the ABCD dataset while working in R or similar statistical programming languages.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Origin</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="#domain">domain</a></td>
+<td>ABCD metadata</td>
+<td>a sorting system that all ABCD 6.0 release variables were sorted into</td>
+</tr>
+<tr class="even">
+<td><a href="#sub_domain">sub_domain</a></td>
+<td>ABCD metadata</td>
+<td>a subsystem within domain that all ABCD 6.0 release variables were sorted into</td>
+</tr>
+<tr class="odd">
+<td><a href="#source">source</a></td>
+<td>ABCD metadata</td>
+<td>allows us to quickly tell who the respondent/subject was</td>
+</tr>
+<tr class="even">
+<td><a href="#table_name">table_name</a></td>
+<td>ABCD metadata</td>
+<td>collections of ABCD variables that were administered and/or collected together</td>
+</tr>
+<tr class="odd">
+<td><a href="#variable">variable</a></td>
+<td>ABCD metadata and Pelham Lab</td>
+<td>name of the item; mostly derived from ABCD 6.0 metadata; some created by the Pelham Lab through manipulation</td>
+</tr>
+<tr class="even">
+<td><a href="#label">label</a></td>
+<td>ABCD metadata and Pelham Lab</td>
+<td>describes the contents of the variable in more detail</td>
+</tr>
+<tr class="odd">
+<td><a href="#has_branching_logic">has_branching_logic</a></td>
+<td>Pelham Lab</td>
+<td>a yes/no indication of the presence of gating</td>
+</tr>
+<tr class="even">
+<td><a href="#sensitivity">sensitivity</a></td>
+<td>Pelham Lab</td>
+<td>an evaluation of how sensitive the content of the variable is</td>
+</tr>
+<tr class="odd">
+<td><a href="#plab_facet">plab_facet</a></td>
+<td>Pelham Lab</td>
+<td>a sorting system that all ABCD 6.0 release variables and Pelham Lab variables were sorted into</td>
+</tr>
+<tr class="even">
+<td><a href="#plab_subfacet">plab_subfacet</a></td>
+<td>Pelham Lab</td>
+<td>a subsystem within domain that all ABCD 6.0 release and Pelham Lab variables were sorted into</td>
+</tr>
+<tr class="odd">
+<td><a href="#alexsa_facet">alexsa_facet</a></td>
+<td>Pelham Lab</td>
+<td>utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment (<a href="https://pubmed.ncbi.nlm.nih.gov/20180677/">Ridenour et al., 2009</a>) to sort variables into</td>
+</tr>
+<tr class="even">
+<td><a href="#nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo">nobs_00mo, nobs_12mo, nobs_24mo, nobs_36mo, nobs_48mo, nobs_60mo, or nobs_72mo</a></td>
+<td>Pelham Lab</td>
+<td>counts number of observations (nobs) in any given wave of ABCD data collection for a given item</td>
+</tr>
+</tbody>
+</table>
+<section id="domain" class="level3">
+<h3 class="anchored" data-anchor-id="domain">domain</h3>
+<p>The domain is a sorting system originating from the ABCD metadata that groups all items into the following broad categories:</p>
+<ul>
+<li><p>ABCD (General)</p></li>
+<li><p>Friends, Family, &amp; Community</p></li>
+<li><p>Mental Health</p></li>
+<li><p>Neurocognition</p></li>
+<li><p>Novel Technologies</p></li>
+<li><p>Physical Health</p></li>
+<li><p>Substance Use</p></li>
+</ul>
+<p>There are more domains in ABCD – these are just the ones represented in TSP-ABCD.</p>
+</section>
+<section id="sub_domain" class="level3">
+<h3 class="anchored" data-anchor-id="sub_domain">sub_domain</h3>
+<p>The sub_domain is a sorting system originating from the ABCD metadata that groups items into the following categories within domains:</p>
+<ul>
+<li><p>Actigraphy</p></li>
+<li><p>Administrative</p></li>
+<li><p>Broad Psychopathology</p></li>
+<li><p>Cognition</p></li>
+<li><p>Community</p></li>
+<li><p>Culture</p></li>
+<li><p>Demographics</p></li>
+<li><p>Development</p></li>
+<li><p>Emotion</p></li>
+<li><p>Family</p></li>
+<li><p>Medical</p></li>
+<li><p>Mood</p></li>
+<li><p>Nutrition</p></li>
+<li><p>Parenting</p></li>
+<li><p>Peers</p></li>
+<li><p>Physical Health</p></li>
+<li><p>Psychosis</p></li>
+<li><p>Psychosocial</p></li>
+<li><p>Puberty</p></li>
+<li><p>Questionnaire</p></li>
+<li><p>School (Demographics)</p></li>
+<li><p>Screen Use</p></li>
+<li><p>Sex</p></li>
+<li><p>Sleep</p></li>
+<li><p>Social</p></li>
+<li><p>Stress</p></li>
+<li><p>SU Attitude</p></li>
+<li><p>SU Environment</p></li>
+<li><p>SU Patterns</p></li>
+<li><p>Task</p></li>
+<li><p>Temperament/Personality</p></li>
+<li><p>Work &amp; School</p></li>
+</ul>
+<p>There are more subdomains in ABCD – these are just the ones represented in TSP-ABCD.</p>
+</section>
+<section id="source" class="level3">
+<h3 class="anchored" data-anchor-id="source">source</h3>
+<p>Source refers to the informant that item was collected from / administered to. Informants can be:</p>
+<ul>
+<li><p>Youth</p></li>
+<li><p>Parent</p></li>
+<li><p>Teacher</p></li>
+</ul>
+</section>
+<section id="table_name" class="level3">
+<h3 class="anchored" data-anchor-id="table_name">table_name</h3>
+<p>The table_name column refers to ABCD tables, or collections of grouped ABCD variables. Datapoints from the same table were administered and collected together. For more information on the ABCD tables, read through the <a href="https://wiki.abcdstudy.org/release-notes/start-page.html">ABCD Release Notes</a>.</p>
+</section>
+<section id="variable" class="level3">
+<h3 class="anchored" data-anchor-id="variable">variable</h3>
+<p>The items within the name column are unique variables that can either be found directly in the ABCD dataset or were created by the Pelham Lab through manipulating variables from the ABCD dataset.</p>
+</section>
+<section id="label" class="level3">
+<h3 class="anchored" data-anchor-id="label">label</h3>
+<p>The label column tells describes the contents of the item in further detail, typically the way in which the question was actually presented to the respondent. Many items, however, have labels that briefly describe the contents of the item, but not the way in which it was presented to the respondent. For items created by the Pelham Lab, labels will provide a description of the contents of the item.</p>
+</section>
+<section id="has_branching_logic" class="level3">
+<h3 class="anchored" data-anchor-id="has_branching_logic">has_branching_logic</h3>
+<p>Utilizes the branching_logic column in the ABCD metadata to produce a binary (yes/no) indication of whether the item has branching logic preceding it.</p>
+</section>
+<section id="sensitivity" class="level3">
+<h3 class="anchored" data-anchor-id="sensitivity">sensitivity</h3>
+<p>The sensitivity column captures how jarring the presentation of any given item might be on a survey without context. All items were evaluated by a member of the Pelham Lab as sensitive, maybe sensitive, or not sensitive.</p>
+</section>
+<section id="plab_facet" class="level3">
+<h3 class="anchored" data-anchor-id="plab_facet">plab_facet</h3>
+<p>The plab_facet is a sorting system specifically made to sort the items in the ABCD metadata. The plab_facet was created and reviewed by members of the Pelham Lab @ UCSD. The <a href="https://wiki.abcdstudy.org/release-notes/start-page.html">ABCD Release Notes</a> domains were considered in the creation of the plab_facet, but were expanded upon or made more specific in order to classify all items (including items created by the Pelham Lab)</p>
+</section>
+<section id="plab_subfacet" class="level3">
+<h3 class="anchored" data-anchor-id="plab_subfacet">plab_subfacet</h3>
+<p>The plab_subfacet is a sorting system within the plab_facet created by members of the Pelham Lab. Categories within the plab_subfacet were only created when clear and necessary categories within a plab_facet category emerged, such that all items in a plab_facet category could fall into a plab_subfacet cateogry of at least three or more items.</p>
+</section>
+<section id="alexsa_facet" class="level3">
+<h3 class="anchored" data-anchor-id="alexsa_facet">alexsa_facet</h3>
+<p>The alexsa_facet utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment (Ridenour et al., 2009). The ALEXSA is a child report assessment for predictors of early onset substance abuse and for antisocial behavior.</p>
+<p>Items presented in the original ALEXSA assessment fell into one of 34 unique subscales – all of which are domains in the alexsa_facet. At least two lab members were involved in sorting items and reviewing their placement into specific subscales within the alexsa_facet.</p>
+</section>
+<section id="nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo" class="level3">
+<h3 class="anchored" data-anchor-id="nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo">nobs_00mo, nobs_12mo, nobs_24mo, nobs_36mo, nobs_48mo, nobs_60mo, or nobs_72mo</h3>
+<p>The nobs (number of observations) columns represent the counts of any given item at any wave. The waves are represented as months from baseline for clarity.</p>
+<p>Here is a what each wave in DEAP currently looks like:</p>
+<p>00mo: ses-00A</p>
+<p>12mo: ses-01A</p>
+<p>24mo: ses-02A</p>
+<p>36mo: ses-03A</p>
+<p>48mo: ses-04A</p>
+<p>60mo: ses-05A</p>
+<p>72mo: ses-06A</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
