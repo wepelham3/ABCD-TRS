@@ -2700,3 +2700,4 @@ NA,NA,NA,Parent,NA,mother_any_problems_due_to_alcohol,biological mother has any 
 NA,NA,NA,Parent,NA,father_any_problems_due_to_drugs,biological father has any problems caused by drugs,NA,maybe sensitive,genetics and family history,not applicable,family behavior problems,11817,0,0,0,0,0,4891
 NA,NA,NA,Parent,NA,mother_any_problems_due_to_drugs,biological mother has any problems caused by drugs,NA,maybe sensitive,genetics and family history,not applicable,family behavior problems,11802,0,0,0,0,0,4886
 NA,NA,NA,Parent,NA,child_female,child is female (1/0),NA,not sensitive,identities,sex and gender,_none_,11868,11219,10973,10450,9739,8885,5056
+NA,NA,NA,Parent,NA,youth_age_as_integer,child's age rounded to the nearest integer,NA,not sensitive,demographics,age,_none_,11868,11219,10973,10450,9739,8885,5056
