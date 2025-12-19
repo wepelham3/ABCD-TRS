@@ -71,10 +71,10 @@ ui <- fluidPage(
     div(class = "filter-wrap", selectizeInput("table_name_filter", "Select Table:", choices = NULL, selected = NULL, multiple = TRUE)),
     div(class = "filter-wrap", selectizeInput("has_branching_logic_filter", "Select Branching Logic:", choices = NULL, selected = NULL, multiple = TRUE)),
     div(class = "filter-wrap", selectizeInput("sensitivity_filter", "Select Sensitivity:", choices = NULL, selected = NULL, multiple = TRUE)),
-    div(class = "filter-wrap", selectizeInput("plab_facet_filter", "Select Pelham Lab Facet:", choices = NULL, selected = NULL, multiple = TRUE)),
-    div(class = "filter-wrap", selectizeInput("plab_subfacet_filter", "Select Pelham Lab Subfacet:", choices = NULL, selected = NULL, multiple = TRUE,
-                                              options = list(placeholder = "Choose a Pelham Lab Facet first"))),
-    div(class = "filter-wrap", selectizeInput("alexsa_facet_filter", "Select ALEXSA Facet:", choices = NULL, selected = NULL, multiple = TRUE))
+    div(class = "filter-wrap", selectizeInput("domain_v2_filter", "Select Domain V2:", choices = NULL, selected = NULL, multiple = TRUE)),
+    div(class = "filter-wrap", selectizeInput("domain_v2_subdomain_filter", "Select Domain V2 Subdomain:", choices = NULL, selected = NULL, multiple = TRUE,
+                                              options = list(placeholder = "Choose a Domain V2 first"))),
+    div(class = "filter-wrap", selectizeInput("domain_v3_filter", "Select Domain V3:", choices = NULL, selected = NULL, multiple = TRUE))
   ),
 
   # datatable occupies the rest of the page
@@ -122,16 +122,16 @@ server <- function(input, output, session){
                          selected = character(0))
     updateSelectizeInput(session, "sensitivity_filter", choices = unique(na.omit(metadata.xvars$sensitivity)),
                          selected = character(0))
-    updateSelectizeInput(session, "alexsa_facet_filter", choices = unique(na.omit(metadata.xvars$alexsa_facet)),
+    updateSelectizeInput(session, "domain_v3_filter", choices = unique(na.omit(metadata.xvars$domain_v3)),
                          selected = character(0))
     
-    # ----- use facet_map directly for plab_facet choices ---
-    updateSelectizeInput(session, "plab_facet_filter",
+    # ----- use facet_map directly for domain_v2 choices ---
+    updateSelectizeInput(session, "domain_v2_filter",
                          choices = sort(names(facet_map)),
                          selected = character(0))
     
-    # start plab_subfacet empty (will be filled based on facet selection)
-    updateSelectizeInput(session, "plab_subfacet_filter",
+    # start domain_v2_subdomain empty (will be filled based on facet selection)
+    updateSelectizeInput(session, "domain_v2_subdomain_filter",
                          choices = character(0),
                          selected = character(0))
   })
@@ -205,12 +205,12 @@ server <- function(input, output, session){
   }, ignoreNULL = FALSE)
   
   # --- update subfacet choices when facet seletion changes using facet_map
-  observeEvent(input$plab_facet_filter, {
-    sel_facets <- input$plab_facet_filter
+  observeEvent(input$domain_v2_filter, {
+    sel_facets <- input$domain_v2_filter
     
     if(is.null(sel_facets) || length(sel_facets) == 0){
       # nothing selected -> clear subfacet choices
-      updateSelectizeInput(session, "plab_subfacet_filter",
+      updateSelectizeInput(session, "domain_v2_subdomain_filter",
                            choices = character(0),
                            selected = character(0))
     } else{
@@ -219,18 +219,18 @@ server <- function(input, output, session){
       new_choices <- sort(unique(unlist(matched, use.names = FALSE)))
       
       # preserve any currently-selected subfacets 
-      current_sel <- isolate(input$plab_subfacet_filter)
+      current_sel <- isolate(input$domain_v2_subdomain_filter)
       preserved <- if (!is.null(current_sel)) intersect(current_sel, new_choices) else character(0)
       
-      updateSelectizeInput(session, "plab_subfacet_filter",
+      updateSelectizeInput(session, "domain_v2_subdomain_filter",
                            choices = new_choices,
                            selected = preserved)
     }
   }, ignoreNULL = FALSE) # run once to initialize empty subfacet
   
   # ---- if user opens subfacet before selecting facets  ----
-  observeEvent(input$plab_subfacet_filter, {
-    # do nothing here — we only react when plab_facet_filter changes
+  observeEvent(input$domain_v2_subdomain_filter, {
+    # do nothing here — we only react when domain_v2_filter changes
     # (keeps behavior simple)
   })
   
@@ -255,14 +255,14 @@ server <- function(input, output, session){
     if (!is.null(input$sensitivity_filter) && length(input$sensitivity_filter) > 0) {
       df <- df[df$sensitivity %in% input$sensitivity_filter, , drop = FALSE]
     }
-    if (!is.null(input$plab_facet_filter) && length(input$plab_facet_filter) > 0) {
-      df <- df[df$plab_facet %in% input$plab_facet_filter, , drop = FALSE]
+    if (!is.null(input$domain_v2_filter) && length(input$domain_v2_filter) > 0) {
+      df <- df[df$domain_v2 %in% input$domain_v2_filter, , drop = FALSE]
     }
-    if (!is.null(input$plab_subfacet_filter) && length(input$plab_subfacet_filter) > 0) {
-      df <- df[df$plab_subfacet %in% input$plab_subfacet_filter, , drop = FALSE]
+    if (!is.null(input$domain_v2_subdomain_filter) && length(input$domain_v2_subdomain_filter) > 0) {
+      df <- df[df$domain_v2_subdomain %in% input$domain_v2_subdomain_filter, , drop = FALSE]
     }
-    if (!is.null(input$alexsa_facet_filter) && length(input$alexsa_facet_filter) > 0) {
-      df <- df[df$alexsa_facet %in% input$alexsa_facet_filter, , drop = FALSE]
+    if (!is.null(input$domain_v3_filter) && length(input$domain_v3_filter) > 0) {
+      df <- df[df$domain_v3 %in% input$domain_v3_filter, , drop = FALSE]
     }
     
     return(df)
