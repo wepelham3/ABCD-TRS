@@ -3,14 +3,14 @@ project:
   output-dir : docs
 
 website:
-  title: "Tools for Survey-Based Prediction in ABCD"
+  title: "ABCD Risk Score Tools"
   navbar:
     left:
       - file: index.qmd
         text: Start Here
       - file: code-download.qmd
         text: Download the Tools
-      - file: metadata-download.qmd
+      - file: documentation.qmd
         text: Documentation
       - file: explore-metadata.qmd
         text: Explore the item metadata
