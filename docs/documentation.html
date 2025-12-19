@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tools for Survey-Based Prediction in ABCD – metadata-download</title>
+<title>ABCD Risk Score Tools – documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Tools for Survey-Based Prediction in ABCD</span>
+    <span class="navbar-title">ABCD Risk Score Tools</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -82,23 +82,19 @@ ul.task-list li input[type="checkbox"] {
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Getting Started</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./intro.html" rel="" target="">
- <span class="menu-text">Intro</span></a>
+ <span class="menu-text">Start Here</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./code-download.html" rel="" target="">
  <span class="menu-text">Download the Tools</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./metadata-download.html" rel="" target="" aria-current="page">
+    <a class="nav-link active" href="./documentation.html" rel="" target="" aria-current="page">
  <span class="menu-text">Documentation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./explore-metadata.html" rel="" target="">
- <span class="menu-text">Metadata Explorer</span></a>
+ <span class="menu-text">Explore the item metadata</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./faq.html" rel="" target="">
@@ -130,10 +126,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#label" id="toc-label" class="nav-link" data-scroll-target="#label">label</a></li>
   <li><a href="#has_branching_logic" id="toc-has_branching_logic" class="nav-link" data-scroll-target="#has_branching_logic">has_branching_logic</a></li>
   <li><a href="#sensitivity" id="toc-sensitivity" class="nav-link" data-scroll-target="#sensitivity">sensitivity</a></li>
-  <li><a href="#plab_facet" id="toc-plab_facet" class="nav-link" data-scroll-target="#plab_facet">plab_facet</a></li>
-  <li><a href="#plab_subfacet" id="toc-plab_subfacet" class="nav-link" data-scroll-target="#plab_subfacet">plab_subfacet</a></li>
-  <li><a href="#alexsa_facet" id="toc-alexsa_facet" class="nav-link" data-scroll-target="#alexsa_facet">alexsa_facet</a></li>
-  <li><a href="#nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo" id="toc-nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo" class="nav-link" data-scroll-target="#nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo">nobs_00mo, nobs_12mo, nobs_24mo, nobs_36mo, nobs_48mo, nobs_60mo, or nobs_72mo</a></li>
+  <li><a href="#domain_v2" id="toc-domain_v2" class="nav-link" data-scroll-target="#domain_v2">domain_v2</a></li>
+  <li><a href="#domain_v2_subdomain" id="toc-domain_v2_subdomain" class="nav-link" data-scroll-target="#domain_v2_subdomain">domain_v2_subdomain</a></li>
+  <li><a href="#domain_v3" id="toc-domain_v3" class="nav-link" data-scroll-target="#domain_v3">domain_v3</a></li>
+  <li><a href="#nobs_ses_00a-nobs_ses_01a-nobs_ses_02a-nobs_ses_03a-nobs_ses_04a-nobs_ses_05a-nobs_ses_06a" id="toc-nobs_ses_00a-nobs_ses_01a-nobs_ses_02a-nobs_ses_03a-nobs_ses_04a-nobs_ses_05a-nobs_ses_06a" class="nav-link" data-scroll-target="#nobs_ses_00a-nobs_ses_01a-nobs_ses_02a-nobs_ses_03a-nobs_ses_04a-nobs_ses_05a-nobs_ses_06a">nobs_ses_00A, nobs_ses_01A, nobs_ses_02A, nobs_ses_03A, nobs_ses_04A, nobs_ses_05A, nobs_ses_06A</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -196,22 +192,22 @@ ul.task-list li input[type="checkbox"] {
 <td>an evaluation of how sensitive the content of the variable is</td>
 </tr>
 <tr class="odd">
-<td><a href="#plab_facet">plab_facet</a></td>
+<td><a href="#domain_v2">domain_v2</a></td>
 <td>Pelham Lab</td>
 <td>a sorting system that all ABCD 6.0 release variables and Pelham Lab variables were sorted into</td>
 </tr>
 <tr class="even">
-<td><a href="#plab_subfacet">plab_subfacet</a></td>
+<td><a href="#domain_v2_subdomain">domain_v2_subdomain</a></td>
 <td>Pelham Lab</td>
 <td>a subsystem within domain that all ABCD 6.0 release and Pelham Lab variables were sorted into</td>
 </tr>
 <tr class="odd">
-<td><a href="#alexsa_facet">alexsa_facet</a></td>
+<td><a href="#domain_v3">domain_v3</a></td>
 <td>Pelham Lab</td>
 <td>utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment (<a href="https://pubmed.ncbi.nlm.nih.gov/20180677/">Ridenour et al., 2009</a>) to sort variables into</td>
 </tr>
 <tr class="even">
-<td><a href="#nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo">nobs_00mo, nobs_12mo, nobs_24mo, nobs_36mo, nobs_48mo, nobs_60mo, or nobs_72mo</a></td>
+<td><a href="#nobs_ses_00a-nobs_ses_01a-nobs_ses_02a-nobs_ses_03a-nobs_ses_04a-nobs_ses_05a-nobs_ses_06a">nobs_ses_00A, nobs_ses_01A, nobs_ses_02A, nobs_ses_03A, nobs_ses_04A, nobs_ses_05A, nobs_ses_06A</a></td>
 <td>Pelham Lab</td>
 <td>counts number of observations (nobs) in any given wave of ABCD data collection for a given item</td>
 </tr>
@@ -229,7 +225,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Physical Health</p></li>
 <li><p>Substance Use</p></li>
 </ul>
-<p>There are more domains in ABCD – these are just the ones represented in TSP-ABCD.</p>
+<p>There are more domains in ABCD – these are just the ones represented in ABCD-RSTOOLS.</p>
 </section>
 <section id="sub_domain" class="level3">
 <h3 class="anchored" data-anchor-id="sub_domain">sub_domain</h3>
@@ -260,6 +256,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Sex</p></li>
 <li><p>Sleep</p></li>
 <li><p>Social</p></li>
+<li><p>Standard Variables</p></li>
 <li><p>Stress</p></li>
 <li><p>SU Attitude</p></li>
 <li><p>SU Environment</p></li>
@@ -268,11 +265,11 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Temperament/Personality</p></li>
 <li><p>Work &amp; School</p></li>
 </ul>
-<p>There are more subdomains in ABCD – these are just the ones represented in TSP-ABCD.</p>
+<p>There are more subdomains in ABCD – these are just the ones represented in ABCD-RSTOOLS.</p>
 </section>
 <section id="source" class="level3">
 <h3 class="anchored" data-anchor-id="source">source</h3>
-<p>Source refers to the informant that item was collected from / administered to. Informants can be:</p>
+<p>Source refers to the informant an item was collected from / administered to. Informants can be:</p>
 <ul>
 <li><p>Youth</p></li>
 <li><p>Parent</p></li>
@@ -299,30 +296,22 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="sensitivity">sensitivity</h3>
 <p>The sensitivity column captures how jarring the presentation of any given item might be on a survey without context. All items were evaluated by a member of the Pelham Lab as sensitive, maybe sensitive, or not sensitive.</p>
 </section>
-<section id="plab_facet" class="level3">
-<h3 class="anchored" data-anchor-id="plab_facet">plab_facet</h3>
-<p>The plab_facet is a sorting system specifically made to sort the items in the ABCD metadata. The plab_facet was created and reviewed by members of the Pelham Lab @ UCSD. The <a href="https://wiki.abcdstudy.org/release-notes/start-page.html">ABCD Release Notes</a> domains were considered in the creation of the plab_facet, but were expanded upon or made more specific in order to classify all items (including items created by the Pelham Lab)</p>
+<section id="domain_v2" class="level3">
+<h3 class="anchored" data-anchor-id="domain_v2">domain_v2</h3>
+<p>The domain_v2 is a sorting system specifically made to sort the items in the ABCD metadata. The domain_v2 was created and reviewed by members of the Pelham Lab @ UCSD. The <a href="https://wiki.abcdstudy.org/release-notes/start-page.html">ABCD Release Notes</a> domains were considered in the creation of the domain_v2, but were expanded upon or made more specific in order to classify all items (including items created by the Pelham Lab)</p>
 </section>
-<section id="plab_subfacet" class="level3">
-<h3 class="anchored" data-anchor-id="plab_subfacet">plab_subfacet</h3>
-<p>The plab_subfacet is a sorting system within the plab_facet created by members of the Pelham Lab. Categories within the plab_subfacet were only created when clear and necessary categories within a plab_facet category emerged, such that all items in a plab_facet category could fall into a plab_subfacet cateogry of at least three or more items.</p>
+<section id="domain_v2_subdomain" class="level3">
+<h3 class="anchored" data-anchor-id="domain_v2_subdomain">domain_v2_subdomain</h3>
+<p>The domain_v2_subdomain is a sorting system within the domain_v2 created by members of the Pelham Lab. Categories within the domain_v2_subdomain were only created when clear and necessary categories within a domain_v2 category emerged, such that all items in a domain_v2 category could fall into a domain_v2_subdomain category of at least three or more items.</p>
 </section>
-<section id="alexsa_facet" class="level3">
-<h3 class="anchored" data-anchor-id="alexsa_facet">alexsa_facet</h3>
-<p>The alexsa_facet utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment (Ridenour et al., 2009). The ALEXSA is a child report assessment for predictors of early onset substance abuse and for antisocial behavior.</p>
+<section id="domain_v3" class="level3">
+<h3 class="anchored" data-anchor-id="domain_v3">domain_v3</h3>
+<p>The domain_v3 utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment (Ridenour et al., 2009). The ALEXSA is a child report assessment for predictors of early onset substance abuse and for antisocial behavior.</p>
 <p>Items presented in the original ALEXSA assessment fell into one of 34 unique subscales – all of which are domains in the alexsa_facet. At least two lab members were involved in sorting items and reviewing their placement into specific subscales within the alexsa_facet.</p>
 </section>
-<section id="nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo" class="level3">
-<h3 class="anchored" data-anchor-id="nobs_00mo-nobs_12mo-nobs_24mo-nobs_36mo-nobs_48mo-nobs_60mo-or-nobs_72mo">nobs_00mo, nobs_12mo, nobs_24mo, nobs_36mo, nobs_48mo, nobs_60mo, or nobs_72mo</h3>
-<p>The nobs (number of observations) columns represent the counts of any given item at any wave. The waves are represented as months from baseline for clarity.</p>
-<p>Here is a what each wave in DEAP currently looks like:</p>
-<p>00mo: ses-00A</p>
-<p>12mo: ses-01A</p>
-<p>24mo: ses-02A</p>
-<p>36mo: ses-03A</p>
-<p>48mo: ses-04A</p>
-<p>60mo: ses-05A</p>
-<p>72mo: ses-06A</p>
+<section id="nobs_ses_00a-nobs_ses_01a-nobs_ses_02a-nobs_ses_03a-nobs_ses_04a-nobs_ses_05a-nobs_ses_06a" class="level3">
+<h3 class="anchored" data-anchor-id="nobs_ses_00a-nobs_ses_01a-nobs_ses_02a-nobs_ses_03a-nobs_ses_04a-nobs_ses_05a-nobs_ses_06a">nobs_ses_00A, nobs_ses_01A, nobs_ses_02A, nobs_ses_03A, nobs_ses_04A, nobs_ses_05A, nobs_ses_06A</h3>
+<p>The nobs (number of observations) columns represent the counts of any given item at any wave.</p>
 
 
 </section>
