@@ -1,0 +1,158 @@
+## Documentation for Navigating the Item Metadata
+
+This is a user's guide to navigating the item metadata (metadata-ABCD-items.csv). The csv file contains several columns meant to help navigate the ABCD dataset while working in R or similar statistical programming languages.
+
+| Column                                                                                             | Origin                       | Contents                                                                                                                                                                                                                                   |
+|----------------|----------------|-----------------------------------------|
+| [domain]                                                                                           | ABCD metadata                | a sorting system that all ABCD 6.0 release variables were sorted into                                                                                                                                                                      |
+| [sub_domain]                                                                                       | ABCD metadata                | a subsystem within domain that all ABCD 6.0 release variables were sorted into                                                                                                                                                             |
+| [source]                                                                                           | ABCD metadata                | allows us to quickly tell who the respondent/subject was                                                                                                                                                                                   |
+| [table_name]                                                                                       | ABCD metadata                | collections of ABCD variables that were administered and/or collected together                                                                                                                                                             |
+| [variable]                                                                                         | ABCD metadata and Pelham Lab | name of the item; mostly derived from ABCD 6.0 metadata; some created by the Pelham Lab through manipulation                                                                                                                               |
+| [label]                                                                                            | ABCD metadata and Pelham Lab | describes the contents of the variable in more detail                                                                                                                                                                                      |
+| [has_branching_logic]                                                                              | Pelham Lab                   | a yes/no indication of the presence of gating                                                                                                                                                                                              |
+| [sensitivity]                                                                                      | Pelham Lab                   | an evaluation of how sensitive the content of the variable is                                                                                                                                                                              |
+| [domain_v2]                                                                                        | Pelham Lab                   | a sorting system that all ABCD 6.0 release variables and Pelham Lab variables were sorted into                                                                                                                                             |
+| [domain_v2_subdomain]                                                                              | Pelham Lab                   | a subsystem within domain that all ABCD 6.0 release and Pelham Lab variables were sorted into                                                                                                                                              |
+| [domain_v3]                                                                                        | Pelham Lab                   | utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment ([Ridenour et al., 2009](https://pubmed.ncbi.nlm.nih.gov/20180677/)) to sort variables into |
+| [nobs_ses_00A, nobs_ses_01A, nobs_ses_02A, nobs_ses_03A, nobs_ses_04A, nobs_ses_05A, nobs_ses_06A] | Pelham Lab                   | counts number of observations (nobs) in any given wave of ABCD data collection for a given item                                                                                                                                            |
+
+### domain
+
+The domain is a sorting system originating from the ABCD metadata that groups all items into the following broad categories:
+
+-   ABCD (General)
+
+-   Friends, Family, & Community
+
+-   Mental Health
+
+-   Neurocognition
+
+-   Novel Technologies
+
+-   Physical Health
+
+-   Substance Use
+
+There are more domains in ABCD -- these are just the ones represented in ABCD-RSTOOLS.
+
+### sub_domain
+
+The sub_domain is a sorting system originating from the ABCD metadata that groups items into the following categories within domains:
+
+-   Actigraphy
+
+-   Administrative
+
+-   Broad Psychopathology
+
+-   Cognition
+
+-   Community
+
+-   Culture
+
+-   Demographics
+
+-   Development
+
+-   Emotion
+
+-   Family
+
+-   Medical
+
+-   Mood
+
+-   Nutrition
+
+-   Parenting
+
+-   Peers
+
+-   Physical Health
+
+-   Psychosis
+
+-   Psychosocial
+
+-   Puberty
+
+-   Questionnaire
+
+-   School (Demographics)
+
+-   Screen Use
+
+-   Sex
+
+-   Sleep
+
+-   Social
+
+-   Standard Variables
+
+-   Stress
+
+-   SU Attitude
+
+-   SU Environment
+
+-   SU Patterns
+
+-   Task
+
+-   Temperament/Personality
+
+-   Work & School
+
+There are more subdomains in ABCD -- these are just the ones represented in ABCD-RSTOOLS.
+
+### source
+
+Source refers to the informant an item was collected from / administered to. Informants can be:
+
+-   Youth
+
+-   Parent
+
+-   Teacher
+
+### table_name
+
+The table_name column refers to ABCD tables, or collections of grouped ABCD variables. Datapoints from the same table were administered and collected together. For more information on the ABCD tables, read through the [ABCD Release Notes](https://wiki.abcdstudy.org/release-notes/start-page.html).
+
+### variable
+
+The items within the name column are unique variables that can either be found directly in the ABCD dataset or were created by the Pelham Lab through manipulating variables from the ABCD dataset.
+
+### label
+
+The label column tells describes the contents of the item in further detail, typically the way in which the question was actually presented to the respondent. Many items, however, have labels that briefly describe the contents of the item, but not the way in which it was presented to the respondent. For items created by the Pelham Lab, labels will provide a description of the contents of the item.
+
+### has_branching_logic
+
+Utilizes the branching_logic column in the ABCD metadata to produce a binary (yes/no) indication of whether the item has branching logic preceding it.
+
+### sensitivity
+
+The sensitivity column captures how jarring the presentation of any given item might be on a survey without context. All items were evaluated by a member of the Pelham Lab as sensitive, maybe sensitive, or not sensitive.
+
+### domain_v2
+
+The domain_v2 is a sorting system specifically made to sort the items in the ABCD metadata. The domain_v2 was created and reviewed by members of the Pelham Lab \@ UCSD. The [ABCD Release Notes](https://wiki.abcdstudy.org/release-notes/start-page.html) domains were considered in the creation of the domain_v2, but were expanded upon or made more specific in order to classify all items (including items created by the Pelham Lab)
+
+### domain_v2_subdomain
+
+The domain_v2_subdomain is a sorting system within the domain_v2 created by members of the Pelham Lab. Categories within the domain_v2_subdomain were only created when clear and necessary categories within a domain_v2 category emerged, such that all items in a domain_v2 category could fall into a domain_v2_subdomain category of at least three or more items.
+
+### domain_v3
+
+The domain_v3 utilizes the subscales from the Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment (Ridenour et al., 2009). The ALEXSA is a child report assessment for predictors of early onset substance abuse and for antisocial behavior.
+
+Items presented in the original ALEXSA assessment fell into one of 34 unique subscales -- all of which are domains in the alexsa_facet. At least two lab members were involved in sorting items and reviewing their placement into specific subscales within the alexsa_facet.
+
+### nobs_ses_00A, nobs_ses_01A, nobs_ses_02A, nobs_ses_03A, nobs_ses_04A, nobs_ses_05A, nobs_ses_06A
+
+The nobs (number of observations) columns represent the counts of any given item at any wave.
