@@ -1,20 +1,73 @@
 ---
-title: "About TRS-ABCD"
+title: "Start Here"
 ---
 
-## Welcome
+## **What is this website?**
 
-This is the website for navigating Tools for Risk Scores in the Adolescent Brain Cognitive Development Study (TRS-ABCD). Created by the Pelham Lab, TRS-ABCD provides researchers familiar with the ABCD study with practical tools to create predictive survey and / or screening models in the ABCD Study. If you do not already have access to the ABCD Study, you can request access to it through the National Institute of Health (NIH). For more information about the ABCD Study, click [here](https://abcdstudy.org/). You will need R to use TRS-ABCD.
+This website describes a set of tools we created for developing practical risk scores using the Adolescent Brain Cognitive Development ([ABCD](https://abcdstudy.org/)) Study 6.0 release.
 
-To get started:
+A "risk score" measures the chance that a negative outcome will occur for a given youth.
 
-1.  If you don't already have it, obtain access to the ABCD 6.0 data (only available directly through the [NIH](https://www.nbdc-datahub.org/))
-2.  Download the code repository. This code will take the ABCD Study 6.0 data and create a tidy dataframe with individual survey items ready to plug into a predictive model.
+Here are some examples of potential risk scores:
 
-If you do not use R, you can still download our item metadata (metadata-ABCD-items.csv) to work on survey-based projects. The items in the metadata consist of the entirety of variables that could be presented on a survey with little to no context.
+-   A risk score for children ages 9-10 years old that measures the probability of developing a substance use disorder by age 18
 
-\*\*\*
+-   A risk score for teenagers that predicts the level of depressive symptoms 12 months into the future
 
-Development of this website and the associated work was funded by a grant from the National Institute on Drug Abuse (NIDA), DA058314.
+-   A risk score for teens in 9th-12th grade that predicts the probability of school dropout
 
-The analysis methodologies, findings, and interpretations expressed in publications using TRS-ABCD are those of the authors and do not constitute an endorsement from the Pelham Lab.
+The tools on this website are designed to help you create a risk score for any outcome variable that is measured in the ABCD Study - whether substance use, depression, school dropout, or something else entirely.
+
+Development of this website and the associated tools was supported by a grant from the National Institute on Drug Abuse ([NIDA](https://nida.nih.gov/)), DA058314.
+
+### Why focus on "practical" risk scores?
+
+A risk score could be estimated using any type of data - surveys, clinical data, brain imaging, genotyping, passive sensing, etc.
+
+The tools on this website focus on risk scores that consist only of survey questions (often called survey "items"). Risk scores that consist only of survey questions are practical because they are simple and cheap to administer.
+
+### **Why focus on the ABCD Study?**
+
+The ABCD Study is a longitudinal cohort of 11,880 youth ages 9-10 years old who were recruited at 21 study sites across the United States. They are being assessed annually until ages 19-20 in a wide variety of domains.
+
+Because the ABCD Study sample is so large and the assessments are so comprehensive, it offers a great opportunity to create risk scores that can generalize.
+
+### **I want to create a practical risk score using ABCD Study data - but how?**
+
+There are 4 steps to create and evaluate a new risk score:
+
+1.  Choose what to predict ($Y$) - the outcome of interest.
+
+2.  Choose the predictors ($X$s) - the survey items.
+
+3.  Create a risk algorithm that takes values on the predictors ($X$s) as inputs and gives a risk score ($\hat{Y}$) as the output
+
+4.  Evaluate the performance of the risk scores estimated in #3 along several metrics of predictive performance.
+
+The tools included on this website will help you with each step. They include:
+
+-   Code that with 1-click will create a tidy dataframe with 2,742 individual survey items to use as predictors ($X$s) in a risk score
+
+-   Metadata for the 2,742 individual survey items that can be used to help choose which survey items to include in the risk score (e.g., only items filled out by parents, or only items asking about certain topics)
+
+-   `R` Functions for choosing survey items automatically
+
+-   `R` functions for evaluating the risk score's performance
+
+-   A worked example that shows how to create a risk score from start to finish
+
+### **How do I get started?**
+
+First, you'll need access to the ABCD Study 6.0 data - apply for that at the [NBDC Data Hub](https://www.nbdc-datahub.org/).
+
+Second, you'll need to install [R](https://www.r-project.org/), the statistical software environment, and [RStudio](https://posit.co/download/rstudio-desktop/), the integrated development environment.
+
+Third, download the `Rproject` you can find at this Github repository: \[pending final URL\].
+
+The `Rproject` includes the code, metadata, tools, and a fully worked example.
+
+The worked examples starts with ABCD data files download from the NBDC Data Hub and ends with a statistics measuring predictive performance of a new risk score. The code can be modified to create the risk score you want to, in the way you desire.
+
+To help wrap your ahead around the possibilities, here is a preprint in which we used these tools to develop new risk scores for predicting high-risk substance use:
+
+\[pending final URL from PsyArxiv\]
