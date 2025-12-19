@@ -24,7 +24,7 @@ d\) any other reason that would make presenting the variable on a predictive scr
 
 Columns were also created to facilitate recoding potential items and also to sort/categorize the items.
 
-More information on how we created the bespoke metadata can be found [here](https://docs.google.com/document/d/1wit57vQvdoEeb6oLyM0x9mYwy2F0ez0y_4foyNkmhvY/edit?tab=t.0).
+More information on how we created the bespoke metadata can be found [here](02-how-we-created-the-bespoke-metadata.pdf)
 
 ### **How did you decide which variables to recode, and how to recode them?**
 
