@@ -62,7 +62,7 @@ Assessment of Liability and EXposure to Substance use and Antisocial behavior fo
 
 Here are some references!
 
-Steyerberg, E. W., & Harrell, F. E. (2016). Prediction models need appropriate internal, internal--external, and external validation. Journal of Clinical Epidemiology, 69, 245--247. https://doi.org/10.1016/j.jclinepi.2015.04.005
+Steyerberg, E. W., & Harrell, F. E. (2016). Prediction models need appropriate internal, internal--external, and external validation. Journal of Clinical Epidemiology, 69, 245--247. <https://doi.org/10.1016/j.jclinepi.2015.04.005>
 
 Japkowicz, N., & Shah, M. (2011). Evaluating Learning Algorithms: A Classification Perspective. Cambridge University Press.
 
