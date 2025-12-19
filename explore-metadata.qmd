@@ -11,4 +11,4 @@ format: html
 
 Here is the [link](https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf) to the csv file (metadata-ABCD-items.csv) for the item metadata.
 
-***On youth substance use data:*** Youth substance use data has yet to be evaluated as potential items for TRS-ABCD. We expect to finish evaluating youth substance use data and update this page by end of January 2026.
+***On youth substance use data:*** Youth substance use data has yet to be evaluated as potential items for ABCD-RSTOOLS. We expect to finish evaluating youth substance use data and update this page by end of January 2026.
