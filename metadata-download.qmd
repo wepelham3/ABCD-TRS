@@ -3,7 +3,7 @@
 This is a user's guide to navigating the item metadata (metadata-ABCD-items.csv). The csv file contains several columns meant to help navigate the ABCD dataset while working in R or similar statistical programming languages.
 
 | Column                                                                           | Origin                       | Contents                                                                                                                                                                                                                                   |
-|----------------------------------------------------------------------------------|------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|--------------|--------------|--------------------------------------------|
 | [domain]                                                                         | ABCD metadata                | a sorting system that all ABCD 6.0 release variables were sorted into                                                                                                                                                                      |
 | [sub_domain]                                                                     | ABCD metadata                | a subsystem within domain that all ABCD 6.0 release variables were sorted into                                                                                                                                                             |
 | [source]                                                                         | ABCD metadata                | allows us to quickly tell who the respondent/subject was                                                                                                                                                                                   |
@@ -35,7 +35,7 @@ The domain is a sorting system originating from the ABCD metadata that groups al
 
 -   Substance Use
 
-There are more domains in ABCD -- these are just the ones represented in TSP-ABCD.
+There are more domains in ABCD -- these are just the ones represented in TRS-ABCD.
 
 ### sub_domain
 
@@ -91,6 +91,8 @@ The sub_domain is a sorting system originating from the ABCD metadata that group
 
 -   Social
 
+-   Standard Variables
+
 -   Stress
 
 -   SU Attitude
@@ -105,11 +107,11 @@ The sub_domain is a sorting system originating from the ABCD metadata that group
 
 -   Work & School
 
-There are more subdomains in ABCD -- these are just the ones represented in TSP-ABCD.
+There are more subdomains in ABCD -- these are just the ones represented in TRS-ABCD.
 
 ### source
 
-Source refers to the informant that item was collected from / administered to. Informants can be:
+Source refers to the informant an item was collected from / administered to. Informants can be:
 
 -   Youth
 
