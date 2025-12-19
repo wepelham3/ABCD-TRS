@@ -3,7 +3,7 @@ project:
   output-dir : docs
 
 website:
-  title: "ABCD Risk Score Tools"
+  title: "Tools for creating risk scores in ABCD"
   navbar:
     left:
       - file: index.qmd
