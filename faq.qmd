@@ -1,58 +1,38 @@
 # Frequently Asked Questions
 
-If you have a question that is not currently addressed here, please reach out to \<wpelham at ucsd dot edu\>.
+### **Will the code in `abcd-rstools` work if I don't have the ABCD Study data?**
 
-### **Will the code in abcd-itembuild work if I don't have the ABCD Study data?**
+No, you need the ABCD Study data for the code to work.
 
-No, you must attain access to the ABCD 6.0 release (only available directly from the [NIH](https://www.nbdc-datahub.org/)) for the code to work. It is highly specific to the ABCD dataset.
+You can only get the ABCD data from the NIH via the [NBDC Data Hub](https://www.nbdc-datahub.org/).
 
-### **Is the code available in another programming language aside from R?**
+### **Is the code available in another programming language besides R?**
 
-No, currently the only available code for this project is in R.
+No, the code is only available in R.
 
-### **How did you create the metadata?**
+### **What is the "item metadata" and how did you create it?**
 
-Pelham Lab research assistants evaluated the entirety of the metadata from the ABCD 6.0 release under the supervision of Dr. William Pelham III. Variables were first evaluated on the basis of viability as a question on a survey. If a variable could be a survey question, it was then evaluated on the following:
+The item metadata (`ABCD-item-metadata.csv`) is a table that identifies which variables in the ABCD Study data could be survey items on a risk score. The table also has additional information that might be helpful when creating a risk score (e.g., which topic that question asked about, who the question was asked of).
 
-a\) administration of the variable in the core study (such that all eligible ABCD participants could have completed the variable) ,
+We made the item metadata by looking at every single variable in the ABCD 6.0 release. For each variable, we checked whether it met the following criteria:
 
-b\) administration of the variable happening outside of the eligibility screener,
+\(a\) it could be measured via survey item (vs., e.g., required brain imaging)
 
-c\) if gating is present, the variable's ability to be combined with the gating question(s) to produce a straightforward single question with a single set of responses with a monotonic relationship with the outcomes , and
+\(b\) it was administered in the core study, to the full ABCD sample (vs. a subsample or the eligibility screener)
 
-d\) any other reason that would make presenting the variable on a predictive screening battery difficult.
+\(c\) if skip/display logic was present, it could be appropriately handled by recoding
 
-Columns were also created to facilitate recoding potential items and also to sort/categorize the items.
+Guided by this table, we then did all the recoding that would be necessary to create a clean dataframe of items that are ready to enter into risk scores and test as predictors.
 
-More information on how we created the bespoke metadata can be found [here](02-how-we-created-the-bespoke-metadata.pdf)
+The script `worked-example.R` in `abcd-rstools` shows how the finished item metadata can be used to create and evaluate a risk score. If you want to know more detail about how we created the metadata, and handled edge cases, view some further documentation [here](02-how-we-created-the-bespoke-metadata.pdf).
 
-### **How did you decide which variables to recode, and how to recode them?**
+### **Are there any problems in the item metadata I should be aware of?**
 
-Variables were recoded for the following reasons:
+1.  Items the measured the youth's substance use are currently excluded from the pool of items. This is because the ABCD Study's assessment of substance use entailed some complicated skip logic that differed over time. We are still finishing the recoding of the substance use variables into items and expect to finish in January 2025.
 
-1.  The same variable was split into two or more separate variables: usually a baseline variable and a longitudinal variable. For example, the question "Has she/he \[your child\] ever been to a doctor for allergies" is asked at baseline, responses for which are stored in the variable ph_p_mhx_002. Following baseline, the question is rephrased as "Since we last saw you, has your child been to a doctor for allergies", responses for which are stored in ph_p_mhx_002\_\_l. Upon evaluating that there is no meaningful change in the contents of the question itself, these variables were combined into the baseline variable, after which we deleted the longitudinal variable.
-
-2.  The variable itself did not have responses that were monotonic (linear). For example, the question
-
-    | *What best describes your child's current school setting?*
-
-    can only elicit responses that are not linear (e.g., "public school", "private school", "home school", etc.). To be able to use the content of these variables in our prediction models, we recoded each response to these nonlinear variables as binary (0/1) items (e.g., child_in_reg_public_school, child_in_reg_private_school, child_in_online_school, etc.).
-
-3.  The variable was gated by another variable, such that only a subsection of the full ABCD participant pool responded to it AND answers from the gating question(s) could be imputed as responses to the gated variable. For example, the question "About how many hours per week does your child spend listening to music for pleasure?" is only presented to parents who endorse that their child listens to music for pleasure. We know, however, that parents who do not endorse that their child listens to music, if presented with the question, "About how many hours per week does your child spend listening to music for pleasure?" would have responded with "0 hours." As such, we impute 0s for hours of music listening per week for people who responded "no" to the gating question.
-
-4.  The variable was in units that could not be adequately represented in a linear model (e.g., hours and minutes) without recoding (e.g., 3:30 pm --\> 15.5)
-
-### **Where are the items measuring youth substance use?**
-
-TRS-ABCD was initially conceptualized as a predictive tool for the outcome of high-risk, early substance use. As such, the lab prioritized evaluating whether variables could be considered items when they did not contain youth substance use. We are currently working on evaluating these variables and will update the metadata on this website once we have finished. Here is a [spreadsheet](https://www.rd.usda.gov/sites/default/files/pdf-sample_0.pdf) containing all potential items flagged for youth substance use.
-
-### **I think there is a bug in your code or error in your metadata --- what should I do?**
+### **I think there is a bug in your code or error in your item metadata --- what should I do?**
 
 \[pending: check back later\]
-
-### **What is "ALEXSA" and why is it included in the metadata?**
-
-Assessment of Liability and EXposure to Substance use and Antisocial behavior for Children (ALEXSA) assessment ([Ridenour et al., 2009](https://pubmed.ncbi.nlm.nih.gov/20180677/)) is a child report assessment for predictors of early onset substance abuse and for antisocial behavior. The "alexsa_facet" featured in metadata-ABCD-items.csv was created through evaluating whether each item fit into one of the 34 subscales.
 
 ### **How do I acknowledge / cite this tool?**
 
@@ -75,3 +55,7 @@ Steyerberg, E. W., Moons, K. G. M., Windt, D. A. van der, Hayden, J. A., Perel, 
 Riley, R. D., Hemingway, H., Altman, D. G., & Group,  for the P. (2013). Prognosis research strategy (PROGRESS) 3: Prognostic model research. PLOS Medicine, 10(2), e1001381. <https://doi.org/10.1371/journal.pmed.1001381>
 
 Hingorani, A. D., Windt, D. A. van der, Riley, R. D., Abrams, K., Moons, K. G. M., Steyerberg, E. W., Schroter, S., Sauerbrei, W., Altman, D. G., & Hemingway, H. (2013). Prognosis research strategy (PROGRESS) 4: Stratified medicine research. BMJ, 346, e5793. <https://doi.org/10.1136/bmj.e5793>
+
+### My question isn't answered here - whom should I contact?
+
+Email \<wpelham at ucsd dot edu\>.
