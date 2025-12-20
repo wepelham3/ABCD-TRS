@@ -4,7 +4,7 @@ title: "Start Here"
 
 ## **What is this website?**
 
-This website describes a set of tools we created for developing practical risk scores using the Adolescent Brain Cognitive Development ([ABCD](https://abcdstudy.org/)) Study 6.0 release.
+This website describes a set of tools (ABCD-RSTOOLS) we created for developing practical risk scores using the Adolescent Brain Cognitive Development ([ABCD](https://abcdstudy.org/)) Study 6.0 release.
 
 A "risk score" measures the chance that a negative outcome will occur for a given youth.
 
