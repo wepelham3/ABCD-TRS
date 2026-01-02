@@ -70,4 +70,4 @@ The worked examples starts with ABCD data files download from the NBDC Data Hub 
 
 To help wrap your ahead around the possibilities, here is a preprint in which we used these tools to develop new risk scores for predicting high-risk substance use:
 
-\[pending final URL from PsyArxiv\]
+\[<https://osf.io/preprints/psyarxiv/4rfve_v1>\]

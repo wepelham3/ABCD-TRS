@@ -36,7 +36,7 @@ The script `worked-example.R` in `abcd-rstools` shows how the finished item meta
 
 ### **How do I acknowledge / cite this tool?**
 
-\[pending: check back later\]
+Cite this paper: Pelham III, W. E., Dontha, M., Aks, I. R., Nooney, A., Chitty, T. C., Gonzalez, O., Patel, H., Kemp, E. C., Blyth, S. H., Tapert, S. F., & Brown, S. A. (2025). New risk indexes for identifying children at risk of high-risk substance use during adolescence. Preprint: <https://osf.io/preprints/psyarxiv/4rfve_v1>
 
 ### **Where can I read more about creating and evaluating predictive modeling tools?**
 
