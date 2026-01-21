@@ -7,7 +7,7 @@ suppressWarnings({
     library(DT)
     
     # load csv file
-    metadata.xvars <- read.csv("metadata-ABCD-items.csv") # completed metadata from itembuild (only items)
+    metadata.xvars <- readRDS("df.itembuild.metadata.Rds") # completed metadata from itembuild (only items)
   }) 
 })
 
@@ -37,7 +37,7 @@ facet_map <- list(
   "school"                            = "not applicable",
   "screen time"                       = "not applicable",
   "service utilization"               = "not applicable",
-  "substance use"                     = c("access", "exposure", "cognitions", "personal use")
+  "substance use"                     = c("access", "exposure", "cognitions", "personal use", "treatment", "consequences")
 )
 
 # UI
@@ -269,7 +269,13 @@ server <- function(input, output, session){
     
   })
   # render filtered datatable
-  output$table <- renderDT({datatable(filtered_data(), 
+  output$table <- renderDT({datatable(filtered_data() %>% 
+                                        dplyr::select(domain, sub_domain, source, table_name,
+                                                      variable, label, has_skip_logic, sensitivity,
+                                                      domain_v2, domain_v2_subdomain, domain_v3, 
+                                                      nobs_ses_00A, nobs_ses_01A, nobs_ses_02A,
+                                                      nobs_ses_03A, nobs_ses_04A, nobs_ses_05A,
+                                                      nobs_ses_06A), 
                                       options = list(
                                         scrollX = TRUE,
                                         scrollY = "70vh",
